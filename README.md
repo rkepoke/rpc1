@@ -27,6 +27,9 @@ https://blog.csdn.net/zhawabcd/article/details/78289140
 理解Java的动态代理：
 https://blog.csdn.net/zhawabcd/article/details/78439520
 
+了解动态代理的一片很好的文章：
+https://www.cnblogs.com/softwarewebdesign/p/5926687.html
+
 在理解之后反射问题得以解决：
 https://blog.csdn.net/s3395719/article/details/76064217
 
