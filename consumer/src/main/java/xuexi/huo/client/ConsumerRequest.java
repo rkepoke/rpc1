@@ -3,7 +3,7 @@ package xuexi.huo.client;
 import java.io.Serializable;
 
 /**
- * 这个类是用于封装 请求数据的
+ * 这个类是用于封装 请求数据
  */
 public class ConsumerRequest implements Serializable {
     private String className;
