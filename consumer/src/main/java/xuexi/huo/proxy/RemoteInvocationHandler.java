@@ -32,7 +32,7 @@ public class RemoteInvocationHandler implements InvocationHandler {
      * @throws Throwable
      */
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        // private String host;  忘记方法里不能用private 了
+        // private String host;  忘记方法里不能用private
         ConsumerRequest consumerRequest=new ConsumerRequest();
         consumerRequest.setClassName(method.getDeclaringClass().getName());
         consumerRequest.setMethodName(method.getName());
