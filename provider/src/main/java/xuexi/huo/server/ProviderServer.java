@@ -11,7 +11,7 @@ import java.util.concurrent.Executors;
  */
 public class ProviderServer {
     /**
-     * 阿里巴巴开发手册建议使用ThreadPoolExecutor 创建线程池，避免资源耗尽风险这里就简单用Executor实现了
+     * 阿里巴巴开发手册建议使用ThreadPoolExecutor 创建线程池，避免资源耗尽风险这里就简单用Executor实现
      */
     private ExecutorService executor = Executors.newCachedThreadPool();
 
