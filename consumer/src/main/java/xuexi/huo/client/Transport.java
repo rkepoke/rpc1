@@ -8,7 +8,7 @@ import java.io.OutputStream;
 import java.net.Socket;
 
 /**
- * 模拟ransport层，建立网络通信的
+ * 模拟ransport层，建立网络通信
  */
 public class Transport {
     private String host;
