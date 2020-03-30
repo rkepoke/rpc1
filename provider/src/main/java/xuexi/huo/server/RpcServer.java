@@ -8,7 +8,7 @@ import xuexi.huo.service.impl.HelloServiceImpl;
  * 服务端报：java.io.WriteAbortedException: writing aborted; java.io.NotSerializableException: xuexi.huo.client.ConsumerRequest
  * Caused by: java.io.NotSerializableException: xuexi.huo.client.ConsumerRequest
  * Exception in thread "pool-1-thread-1" java.lang.NullPointerException
- * 应该是xuexi.huo.client.ConsumerRequest没有序列化的意思。
+ * 应该是xuexi.huo.client.ConsumerRequest没有序列化的意思
  * 解决方法很简单，只要在ConsumerRequest上实现Serializable即可。但是要明白的是，网络间的通信数据是要进行序列化的
  */
 public class RpcServer {
