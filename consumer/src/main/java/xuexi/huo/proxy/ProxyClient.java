@@ -23,7 +23,7 @@ public class ProxyClient {
 
 
     /**
-     * 发现以上方法是硬编码不好，不够通用，只能接受HelloService服务，应该用泛型，
+     * 发现以上方法是硬编码，不够通用，只能接受HelloService服务，应该用泛型，
      * @param interfaceService
      * @param host
      * @param port
