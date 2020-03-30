@@ -15,7 +15,6 @@ import java.net.Socket;
  * 在这里实现真正的方法调用
  */
 public class ProcessHandler implements Runnable {
-    //    private HelloService helloService;  你如果把这里写si，还是就报转换错误，应该用OBject接受
     private Object service;
     private Socket socket;
 
@@ -36,12 +35,8 @@ public class ProcessHandler implements Runnable {
         ObjectOutputStream outputStream = null;
         try {
             inputStream = new ObjectInputStream(socket.getInputStream());
-            //  ConsumerRequest consumnerRequest = inputStream.readObject();
-            //同一个工程下引入不同模块的对象使用  要三步见上面
             ConsumerRequest consumnerRequest = (ConsumerRequest) inputStream.readObject();
-            //到这里才真正调用实现类的方法去实现服务
             Object result = invoke(consumnerRequest);
-            //把得到的结果返回
             outputStream=new ObjectOutputStream(socket.getOutputStream());
             outputStream.writeObject(result);
             outputStream.flush();
@@ -59,9 +54,7 @@ public class ProcessHandler implements Runnable {
     }
 
     /**
-     * 这个invoke才是远程调用真正的服务提供者，不过在使用是报了Unhandled exception: java.lang.NoSuchMethodException异常，抛出即可
-     * 查看了JavaAPI文档的Class 的getMethod方法才知道，getMethod只能调用public声明的方法，而getDeclaredMethod基本可以调用任何类型声明的方法
-     *
+     * 服务请求的真正实现
      * @param consumnerRequest
      * @return
      */
@@ -72,7 +65,6 @@ public class ProcessHandler implements Runnable {
         for (int i = 0; i < parameters.length; i++) {
             parametersType[i] = parameters[i].getClass();
         }
-        //z这里报Unhandled exception: java.lang.NoSuchMethodException 异常，解决见上
         Method method = service.getClass().getMethod(consumnerRequest.getMethodName(), parametersType);
         return method.invoke(service, parameters);
     }

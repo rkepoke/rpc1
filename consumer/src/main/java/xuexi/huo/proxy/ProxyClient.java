@@ -11,7 +11,6 @@ public class ProxyClient {
 
 
     /**
-     * 因为要想远程调用就必须知道IP、+port  所以只能通过handler传过去调用远程方法了，对hadler的实现做改进，添加ip+port属性
      * @param helloService
      * @param host
      * @param port
@@ -24,7 +23,7 @@ public class ProxyClient {
 
 
     /**
-     * 发现以上方法写死了，不够通用，只能接受HelloService服务，应该用泛型，
+     * 发现以上方法是硬编码不好，不够通用，只能接受HelloService服务，应该用泛型，
      * @param interfaceService
      * @param host
      * @param port

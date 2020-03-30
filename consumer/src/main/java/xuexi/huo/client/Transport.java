@@ -8,7 +8,7 @@ import java.io.OutputStream;
 import java.net.Socket;
 
 /**
- * 模拟dubbo的Transport层，建立网络通信的
+ * 模拟ransport层，建立网络通信的
  */
 public class Transport {
     private String host;
@@ -39,8 +39,7 @@ public class Transport {
     }
 
     /**
-     * 忘了传输对象用什么io流了，百度之后发现用ObjectOutputStream，ObjectInputStream其实里面包装的是getOutputStream，getInputStream
-     * 这也是装饰着模式的应用了，减轻了开发人员的负担
+     * ObjectOutputStream。ObjectInputStream这也是装饰着模式的应用了，减轻了开发人员的负担
      * @param consumerRequest
      * @return
      */
