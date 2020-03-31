@@ -10,6 +10,7 @@ version1
 编写顺序，由左边开始，从上往下，在到右边，从下往上。
 
 编写的时候有参考到的资料：
+
 dubbo的原理机制：
 https://blog.csdn.net/paul_wei2008/article/details/19355681
 
